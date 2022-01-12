@@ -1,14 +1,15 @@
 import React from "react";
 import logo from "./portfolio-icon.png";
 import "./App.css";
+import "./css/appContent.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>terakawa kohei</h1>
-        <p>this is my portfolio</p>
+      <header className="content">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>odayakalife</p>
+        {/* <p>this is my portfolio</p> */}
       </header>
     </div>
   );
