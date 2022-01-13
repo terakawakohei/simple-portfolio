@@ -8,7 +8,7 @@ function App() {
   const links: Link[] = [
     {
       name: "github",
-      link: "http",
+      link: "https://github.com/terakawakohei",
       icon: <SiGithub />,
     },
     {
@@ -19,7 +19,7 @@ function App() {
 
     {
       name: "pixiv",
-      link: "https",
+      link: "https://www.pixiv.net/users/6349894",
       icon: <SiPixiv />,
     },
   ];

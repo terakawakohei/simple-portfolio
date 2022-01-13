@@ -14,7 +14,7 @@ const LinkList: FC<Props> = (props) => {
     <>
       <div>
         {links.map((l) => {
-          return <>{l.icon}</>;
+          return <a href={l.link}>{l.icon}</a>;
         })}
       </div>
     </>
