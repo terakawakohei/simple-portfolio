@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Square from "./Square";
 import logo from "./portfolio-icon.png";
 import "./App.css";
 import "./css/pointer.css";
+import "./css/sketch.css";
 import "./css/appContent.css";
 import Contents from "./components/Contents";
 import Timer from "./components/timer";
@@ -26,15 +28,19 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <header className="content">
-        <div
-          className="pointer"
-          style={{ transform: `translate(${mouseX}px,${mouseY}px)` }}
-        ></div>
+      <div
+        className="pointer"
+        style={{ transform: `translate(${mouseX}px,${mouseY}px)` }}
+      ></div>
+      <div className="content">
+        {" "}
         <p>odayakalife</p>
         <Contents />
-        <Timer />
-      </header>
+      </div>
+      {/* <Timer /> */}
+      <div className="sketch">
+        <Square />
+      </div>
     </div>
   );
 }
