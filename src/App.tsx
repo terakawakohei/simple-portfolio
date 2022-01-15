@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./portfolio-icon.png";
 import "./App.css";
+import "./css/pointer.css";
 import "./css/appContent.css";
-import LinkList, { Link } from "./components/links";
-import { SiTwitter, SiGithub, SiPixiv } from "react-icons/si";
+import Contents from "./components/Contents";
+import Timer from "./components/timer";
 function App() {
-  const links: Link[] = [
-    {
-      name: "github",
-      link: "https://github.com/terakawakohei",
-      icon: <SiGithub />,
-    },
-    {
-      name: "twitter",
-      link: "https://twitter.com/xxriver000",
-      icon: <SiTwitter />,
-    },
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
 
-    {
-      name: "pixiv",
-      link: "https://www.pixiv.net/users/6349894",
-      icon: <SiPixiv />,
-    },
-  ];
-  console.log(typeof links[0].icon);
+  //初回のみ実行
+  useEffect(() => {
+    //ここの処理が初回に行われる
+    //イベントリスナの登録
+    const mouseMoveListener = (event: MouseEvent) => {
+      setMouseX(event.x);
+      setMouseY(event.y);
+    };
+    //EventTarget.addEventListener()
+    //特定のイベント（ここではmousemove）がwindowに配信されるたびに呼び出される関数を設定
+    //マウスを動かすたびに、HookStateにマウスの座標を登録
+    window.addEventListener("mousemove", mouseMoveListener);
+
+    return () => window.removeEventListener("mousemove", mouseMoveListener);
+  }, []);
   return (
     <div className="App">
       <header className="content">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <div
+          className="pointer"
+          style={{ transform: `translate(${mouseX}px,${mouseY}px)` }}
+        ></div>
         <p>odayakalife</p>
-        {/* <p>this is my portfolio</p> */}
-        <LinkList list={links} />
+        <Contents />
+        <Timer />
       </header>
     </div>
   );
