@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Square from "./Square";
+import Square from "./components/Square";
+import Cursor from "./components/Cursor";
 import logo from "./portfolio-icon.png";
 import "./App.css";
 import "./css/pointer.css";
@@ -39,7 +40,7 @@ function App() {
       </div>
       {/* <Timer /> */}
       <div className="sketch">
-        <Square />
+        <Cursor />
       </div>
     </div>
   );
