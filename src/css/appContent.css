@@ -1,5 +1,5 @@
 .content{
-    margin:8vh;
+    /* margin:8vh; */
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -7,4 +7,8 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  position:  absolute;        /* 要素の配置方法を指定 */
+    padding:  20px;             /* 余白指定 */
+    left:  50px;                /* 左からの位置指定 */
+    top: 50px; 
 }

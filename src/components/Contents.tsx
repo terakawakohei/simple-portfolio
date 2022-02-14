@@ -24,6 +24,9 @@ const Contents: FC = () => {
   return (
     <>
       <LinkList list={links} />
+      <a href="https://glacier-apparel-d4d.notion.site/Log-bac9ced73a6c473a8e7fa74304207899">
+        Log
+      </a>
     </>
   );
 };

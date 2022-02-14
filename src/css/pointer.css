@@ -1,12 +1,23 @@
 .pointer{
     width: 20px;
   height: 20px;
-  background: rgba(236, 236, 236, 0.75);
+  /* background: rgba(236, 236, 236, 0.75); */
   position: fixed;
   top: -20px;
   left: -20px;
+
+  /* 円を線にする*/
+  border: solid 1px rgb(255, 255, 255);
+
   border-radius: 50%;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.001s transform;
   pointer-events: none;
   z-index: 999;
+}
+.pointer.pointer--hover {
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(205, 114, 113, 0.5);
 }
