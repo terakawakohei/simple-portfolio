@@ -9,7 +9,7 @@ const Contents: FC = () => {
       link: "https://github.com/terakawakohei",
       icon: <SiGithub />,
     },
-    {
+    /*   {
       name: "twitter",
       link: "https://twitter.com/xxriver000",
       icon: <SiTwitter />,
@@ -19,7 +19,7 @@ const Contents: FC = () => {
       name: "pixiv",
       link: "https://www.pixiv.net/users/6349894",
       icon: <SiPixiv />,
-    },
+    },*/
   ];
   return (
     <>
