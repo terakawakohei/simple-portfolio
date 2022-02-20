@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Square from "./components/Square";
-import Cursor from "./components/Cursor";
+import Cursor from "./sketch/Cursor";
 import logo from "./portfolio-icon.png";
 import "./App.css";
 import "./css/pointer.css";

@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import p5 from "p5";
 
 const sketch = (p: p5) => {
-  let canvasSize = p.windowWidth / 2;
+  let canvasSize = 0;
+  if (p.windowWidth > p.windowHeight) {
+    canvasSize = p.windowHeight / 1.5;
+  } else canvasSize = p.windowWidth / 1.5;
   p.setup = () => {
     // キャンバスを作成して#squareの子に配置する
     p.createCanvas(canvasSize, canvasSize).parent("cursor");
@@ -29,7 +32,8 @@ const sketch = (p: p5) => {
 
         let angle = p.atan2(p.mouseY - y, p.mouseX - x);
         //length=2+noise(lNoise)*8
-        let length = 6;
+        let length = p.windowWidth / 1.5 / (cells * 7);
+        console.log(p.windowWidth / 1.5 / (cells * 7));
 
         p.push();
         p.translate(x, y);
