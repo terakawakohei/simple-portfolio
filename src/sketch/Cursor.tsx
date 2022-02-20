@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import p5 from "p5";
 
 const sketch = (p: p5) => {
+  console.log(isSmartPhone());
+  console.log("hghg");
   let canvasSize = 0;
   if (p.windowWidth > p.windowHeight) {
     canvasSize = p.windowHeight / 1.5;
@@ -33,12 +35,17 @@ const sketch = (p: p5) => {
         let angle = p.atan2(p.mouseY - y, p.mouseX - x);
         //length=2+noise(lNoise)*8
         let length = canvasSize / (cells * 7);
-        console.log(p.windowWidth / 1.5 / (cells * 7));
+        // console.log(p.windowWidth / 1.5 / (cells * 7));
 
         p.push();
         p.translate(x, y);
         p.rotate(angle);
         p.stroke(0, 168, 176);
+        if(isSmartPhone()){
+          p.strokeWeight(1.3);
+        }else {
+          p.strokeWeight(2);
+        }
         p.line(-length / 2, -length / 2, length / 2, length / 2);
         p.pop();
       }
@@ -57,4 +64,11 @@ const Cursor: React.FC = () => {
   );
 };
 
+function isSmartPhone() {
+  if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 export default Cursor;
