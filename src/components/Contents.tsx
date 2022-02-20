@@ -2,6 +2,8 @@ import { FC } from "react";
 import LinkList, { Link } from "./links";
 
 import { SiTwitter, SiGithub, SiPixiv } from "react-icons/si";
+
+import {GoLinkExternal} from "react-icons/go";
 const Contents: FC = () => {
   const links: Link[] = [
     {
@@ -24,9 +26,9 @@ const Contents: FC = () => {
   return (
     <>
       {/*<LinkList list={links} />*/}
-      <a href="https://teraka.tumblr.com/">work</a>
-      <a href="https://glacier-apparel-d4d.notion.site/Log-bac9ced73a6c473a8e7fa74304207899">
-        log
+      <a href="https://teraka.tumblr.com/" target="_blank">work<GoLinkExternal /></a>
+      <a href="https://glacier-apparel-d4d.notion.site/Log-bac9ced73a6c473a8e7fa74304207899" target="_blank">
+        log<GoLinkExternal />
       </a>
     </>
   );

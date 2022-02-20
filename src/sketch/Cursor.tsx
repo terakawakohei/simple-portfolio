@@ -32,13 +32,13 @@ const sketch = (p: p5) => {
 
         let angle = p.atan2(p.mouseY - y, p.mouseX - x);
         //length=2+noise(lNoise)*8
-        let length = p.windowWidth / 1.5 / (cells * 7);
+        let length = canvasSize / (cells * 7);
         console.log(p.windowWidth / 1.5 / (cells * 7));
 
         p.push();
         p.translate(x, y);
         p.rotate(angle);
-        p.stroke(255, 255, 255);
+        p.stroke(0, 168, 176);
         p.line(-length / 2, -length / 2, length / 2, length / 2);
         p.pop();
       }

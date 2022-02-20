@@ -35,7 +35,7 @@ function App() {
       ></div>
       <div className="content">
         {" "}
-        <p>odayakalife</p>
+        <h2>odayakalife</h2>
         <Contents />
       </div>
       {/* <Timer /> */}
