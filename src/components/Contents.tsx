@@ -26,7 +26,7 @@ const Contents: FC = () => {
   return (
     <>
       {/*<LinkList list={links} />*/}
-      <a href="https://teraka.tumblr.com/" target="_blank">illust<GoLinkExternal size={"1.5rem"}/></a>
+      <a href="https://teraka.tumblr.com/" target="_blank">gallery<GoLinkExternal size={"1.5rem"}/></a>
       <a href="https://glacier-apparel-d4d.notion.site/Log-bac9ced73a6c473a8e7fa74304207899" target="_blank">
         illust-log<GoLinkExternal size={"1.5rem"}/>
       </a>
