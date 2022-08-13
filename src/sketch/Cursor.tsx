@@ -40,7 +40,7 @@ const sketch = (p: p5) => {
         p.push();
         p.translate(x, y);
         p.rotate(angle);
-        p.stroke(0, 168, 176);
+        p.stroke(211,211,211);
         if(isSmartPhone()){
           p.strokeWeight(1.3);
         }else {
