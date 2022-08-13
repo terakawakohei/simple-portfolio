@@ -3,7 +3,23 @@
   height:100vh;
    display: flex;
   justify-content: center;
+  align-content: space-between;
   align-items: center;
+  /* cursorを中央に固定配置するため */
+  position:relative;
+}
+.sketch{
+background-attachment: fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+z-index: -99;
+}
+.container{
+display: flex;
+flex-direction: column;
+
 }
 /* OS標準のマウスカーソルを非表示に */
 * {

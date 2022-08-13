@@ -4,7 +4,6 @@ import Cursor from "./sketch/Cursor";
 import logo from "./portfolio-icon.png";
 import "./App.css";
 import "./css/pointer.css";
-import "./css/sketch.css";
 import "./css/appContent.css";
 import Contents from "./components/Contents";
 import Timer from "./components/timer";
@@ -33,15 +32,15 @@ function App() {
         className="pointer"
         style={{ transform: `translate(${mouseX}px,${mouseY}px)` }}
       ></div>
-      <div className="content">
-        {" "}
-        <h2>odayakalife</h2>
-        <Contents />
-      </div>
-      {/* <Timer /> */}
       <div className="sketch">
         <Cursor />
       </div>
+      <div className="content">
+        {" "}
+        <Contents />
+      </div>
+      {/* <Timer /> */}
+
     </div>
   );
 }

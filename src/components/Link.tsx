@@ -20,4 +20,4 @@ const LinkList: FC<Props> = (props) => {
     </>
   );
 };
-export default LinkList;
+export default Link;
