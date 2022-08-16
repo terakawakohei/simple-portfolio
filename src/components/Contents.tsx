@@ -26,15 +26,30 @@ const Contents: FC = () => {
   ];
   return (
     <div >
-<div className="gradient">
+<div className="gradient-title">
     <h1 >odayakalife</h1>
   </div>
+  <a href="https://teraka.tumblr.com/" target="_blank" >
 
-      <a href="https://teraka.tumblr.com/" target="_blank">gallery<GoLinkExternal size={"1.5rem"}/></a>
+<div className="gradient-link">
+<h3>
+
+    gallery
+</h3>
+</div>
+</a>
       <a href="https://glacier-apparel-d4d.notion.site/Log-bac9ced73a6c473a8e7fa74304207899" target="_blank">
-        illust-log<GoLinkExternal size={"1.5rem"}/>
+
+<div className="gradient-link">
+        <h3>
+
+        illust-log
+        </h3>
+</div>
       </a>
-    </div>
+
+
+        </div>
   );
 };
 export default Contents;
