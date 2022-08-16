@@ -16,29 +16,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 @font-face { 
-  font-family: "Maze";
-  src: url("./fonts/Maze.otf") format("opentype");
+  font-family: "Geon";
+  src: url("./fonts/Geon.otf") format("opentype");
   font-weight: 100 900;
 }
 @font-face { 
-  font-family: "AH_SuperDuper-Bold";
-  src: url("./fonts/AH_SuperDuper-Bold.otf") format("opentype");
-  font-weight: 100 900;
-}
-@font-face { 
-  font-family: "Thunder-BlackLC";
-  src: url("./fonts/Thunder-BlackLC.otf") format("opentype");
+  font-family: "Fester";
+  src: url("./fonts/Fester_Trial-Heavy.otf") format("opentype");
   font-weight: 100 900;
 }
 h2 {
-  font-family: "Maze", sans-serif;
+  font-family: "Geon", sans-serif;
   font-weight: 450;
   color:rgb(0, 199, 209);
+  padding-bottom:1rem;
 }
 a {
- font-family: "AH_SuperDuper-Bold", sans-serif;
+ font-family: "Fester", sans-serif;
   font-size:larger;
   font-weight: 150;
   color:rgb(0, 199, 209);
+  text-decoration:none;
 }

@@ -8,9 +8,13 @@ import "./css/sketch.css";
 import "./css/appContent.css";
 import Contents from "./components/Contents";
 import Timer from "./components/timer";
+
+import {GoLinkExternal} from "react-icons/go";
 function App() {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
+let position: React.CSSProperties = {
+       }
 
   //初回のみ実行
   useEffect(() => {
@@ -25,10 +29,11 @@ function App() {
     //マウスを動かすたびに、HookStateにマウスの座標を登録
     window.addEventListener("mousemove", mouseMoveListener);
 
-    return () => window.removeEventListener("mousemove", mouseMoveListener);
+
   }, []);
   return (
-    <div className="App">
+ <>
+   <div className="App">
       <div
         className="pointer"
         style={{ transform: `translate(${mouseX}px,${mouseY}px)` }}
@@ -43,6 +48,7 @@ function App() {
         <Cursor />
       </div>
     </div>
+</>
   );
 }
 
